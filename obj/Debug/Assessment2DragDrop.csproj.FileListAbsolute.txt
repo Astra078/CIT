@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\Assessment2DragDrop\bin\Debug\Assessment2DragDrop.exe.config
+C:\Users\user\source\repos\Assessment2DragDrop\bin\Debug\Assessment2DragDrop.exe
+C:\Users\user\source\repos\Assessment2DragDrop\bin\Debug\Assessment2DragDrop.pdb
+C:\Users\user\source\repos\Assessment2DragDrop\obj\Debug\Assessment2DragDrop.csprojAssemblyReference.cache
+C:\Users\user\source\repos\Assessment2DragDrop\obj\Debug\Assessment2DragDrop.frmMain.resources
+C:\Users\user\source\repos\Assessment2DragDrop\obj\Debug\Assessment2DragDrop.Properties.Resources.resources
+C:\Users\user\source\repos\Assessment2DragDrop\obj\Debug\Assessment2DragDrop.csproj.GenerateResource.cache
+C:\Users\user\source\repos\Assessment2DragDrop\obj\Debug\Assessment2DragDrop.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Assessment2DragDrop\obj\Debug\Assessment2DragDrop.exe
+C:\Users\user\source\repos\Assessment2DragDrop\obj\Debug\Assessment2DragDrop.pdb
