@@ -11,6 +11,7 @@
 *** Objective: Creation of compound calculator that includes nested classes and a Help file
 **/
 
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Assessment2NestedClassHelpFile
 {
@@ -34,5 +36,6 @@ namespace Assessment2NestedClassHelpFile
         {
             Application.Exit();
         }
+        
     }
 }
