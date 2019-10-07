@@ -21,12 +21,20 @@ namespace Assessment2NestedClassHelpFile
 {
     class CompoundInterest
     {
-        //A = P(1+r/n)^nt
-        private double a, p, r, n, t;
+        private double loan { get; set; }
+        private double interest { get; set; }
+
+        public CompoundInterest(double inLoan, double inInterest)
+        {
+            loan = inLoan;
+            interest = inInterest;
+        }
 
         public double calcCompound()
         {
-            return 0;
+            double compound = loan * interest + loan;
+            loan = compound;
+            return compound;
         }
 
         public double calcCompoundWithOutPrinc()
