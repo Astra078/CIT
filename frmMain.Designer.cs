@@ -28,157 +28,259 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnExit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblMorRate = new System.Windows.Forms.Label();
+            this.lblLoanAmount = new System.Windows.Forms.Label();
+            this.lblInterestRate = new System.Windows.Forms.Label();
+            this.lblRepayRate = new System.Windows.Forms.Label();
+            this.lblRepayDate = new System.Windows.Forms.Label();
+            this.cmbMorRate = new System.Windows.Forms.ComboBox();
+            this.txtLoan = new System.Windows.Forms.TextBox();
+            this.txtInterest = new System.Windows.Forms.TextBox();
+            this.cmbRepayRate = new System.Windows.Forms.ComboBox();
+            this.dateRepayDate = new System.Windows.Forms.DateTimePicker();
+            this.mnuStrip = new System.Windows.Forms.MenuStrip();
+            this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuFileExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAboutHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCalculate = new System.Windows.Forms.Button();
+            this.dataRepayments = new System.Windows.Forms.DataGridView();
+            this.VarRepayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.principleRepayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.interestRepayments = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mnuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataRepayments)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnExit
+            // lblMorRate
             // 
-            this.btnExit.Location = new System.Drawing.Point(713, 415);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 0;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.lblMorRate.AutoSize = true;
+            this.lblMorRate.Location = new System.Drawing.Point(12, 32);
+            this.lblMorRate.Name = "lblMorRate";
+            this.lblMorRate.Size = new System.Drawing.Size(138, 17);
+            this.lblMorRate.TabIndex = 1;
+            this.lblMorRate.Text = "Morgage Rate Type:";
             // 
-            // label1
+            // lblLoanAmount
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Morgage Rate Type:";
+            this.lblLoanAmount.AutoSize = true;
+            this.lblLoanAmount.Location = new System.Drawing.Point(12, 63);
+            this.lblLoanAmount.Name = "lblLoanAmount";
+            this.lblLoanAmount.Size = new System.Drawing.Size(96, 17);
+            this.lblLoanAmount.TabIndex = 2;
+            this.lblLoanAmount.Text = "Loan Amount:";
             // 
-            // label2
+            // lblInterestRate
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Loan Amount:";
+            this.lblInterestRate.AutoSize = true;
+            this.lblInterestRate.Location = new System.Drawing.Point(11, 92);
+            this.lblInterestRate.Name = "lblInterestRate";
+            this.lblInterestRate.Size = new System.Drawing.Size(93, 17);
+            this.lblInterestRate.TabIndex = 3;
+            this.lblInterestRate.Text = "Interest Rate:";
             // 
-            // label3
+            // lblRepayRate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Interest Rate:";
+            this.lblRepayRate.AutoSize = true;
+            this.lblRepayRate.Location = new System.Drawing.Point(11, 121);
+            this.lblRepayRate.Name = "lblRepayRate";
+            this.lblRepayRate.Size = new System.Drawing.Size(118, 17);
+            this.lblRepayRate.TabIndex = 4;
+            this.lblRepayRate.Text = "Repayment Rate:";
             // 
-            // label4
+            // lblRepayDate
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Repayment Rate:";
+            this.lblRepayDate.AutoSize = true;
+            this.lblRepayDate.Location = new System.Drawing.Point(11, 154);
+            this.lblRepayDate.Name = "lblRepayDate";
+            this.lblRepayDate.Size = new System.Drawing.Size(118, 17);
+            this.lblRepayDate.TabIndex = 5;
+            this.lblRepayDate.Text = "Repayment Date:";
             // 
-            // label5
+            // cmbMorRate
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 138);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 17);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Repayment Date:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbMorRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMorRate.Items.AddRange(new object[] {
             "Variable interest rate",
             "fixed interest rate",
             "split interest rate"});
-            this.comboBox1.Location = new System.Drawing.Point(158, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(226, 24);
-            this.comboBox1.TabIndex = 6;
+            this.cmbMorRate.Location = new System.Drawing.Point(157, 29);
+            this.cmbMorRate.Name = "cmbMorRate";
+            this.cmbMorRate.Size = new System.Drawing.Size(233, 24);
+            this.cmbMorRate.TabIndex = 6;
             // 
-            // textBox1
+            // txtLoan
             // 
-            this.textBox1.Location = new System.Drawing.Point(158, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(226, 22);
-            this.textBox1.TabIndex = 7;
+            this.txtLoan.Location = new System.Drawing.Point(157, 60);
+            this.txtLoan.Name = "txtLoan";
+            this.txtLoan.Size = new System.Drawing.Size(233, 22);
+            this.txtLoan.TabIndex = 7;
             // 
-            // textBox2
+            // txtInterest
             // 
-            this.textBox2.Location = new System.Drawing.Point(158, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(226, 22);
-            this.textBox2.TabIndex = 8;
+            this.txtInterest.Location = new System.Drawing.Point(157, 89);
+            this.txtInterest.Name = "txtInterest";
+            this.txtInterest.Size = new System.Drawing.Size(233, 22);
+            this.txtInterest.TabIndex = 8;
             // 
-            // comboBox2
+            // cmbRepayRate
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbRepayRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRepayRate.FormattingEnabled = true;
+            this.cmbRepayRate.Items.AddRange(new object[] {
             "Weekly",
             "Monthly",
             "Quarterly",
             "Semi-Anually",
             "Yearly"});
-            this.comboBox2.Location = new System.Drawing.Point(158, 102);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(226, 24);
-            this.comboBox2.TabIndex = 9;
+            this.cmbRepayRate.Location = new System.Drawing.Point(157, 118);
+            this.cmbRepayRate.Name = "cmbRepayRate";
+            this.cmbRepayRate.Size = new System.Drawing.Size(233, 24);
+            this.cmbRepayRate.TabIndex = 9;
             // 
-            // dateTimePicker1
+            // dateRepayDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(158, 133);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(226, 22);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dateRepayDate.Location = new System.Drawing.Point(157, 149);
+            this.dateRepayDate.Name = "dateRepayDate";
+            this.dateRepayDate.Size = new System.Drawing.Size(233, 22);
+            this.dateRepayDate.TabIndex = 10;
+            // 
+            // mnuStrip
+            // 
+            this.mnuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.mnuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuFile,
+            this.mnuAbout});
+            this.mnuStrip.Location = new System.Drawing.Point(0, 0);
+            this.mnuStrip.Name = "mnuStrip";
+            this.mnuStrip.Size = new System.Drawing.Size(586, 28);
+            this.mnuStrip.TabIndex = 12;
+            this.mnuStrip.Text = "menuStrip1";
+            // 
+            // mnuFile
+            // 
+            this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuFileExit});
+            this.mnuFile.Name = "mnuFile";
+            this.mnuFile.Size = new System.Drawing.Size(44, 24);
+            this.mnuFile.Text = "&File";
+            // 
+            // mnuFileExit
+            // 
+            this.mnuFileExit.Name = "mnuFileExit";
+            this.mnuFileExit.Size = new System.Drawing.Size(108, 26);
+            this.mnuFileExit.Text = "Exit";
+            this.mnuFileExit.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // mnuAbout
+            // 
+            this.mnuAbout.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuAboutHelp});
+            this.mnuAbout.Name = "mnuAbout";
+            this.mnuAbout.Size = new System.Drawing.Size(62, 24);
+            this.mnuAbout.Text = "About";
+            // 
+            // mnuAboutHelp
+            // 
+            this.mnuAboutHelp.Name = "mnuAboutHelp";
+            this.mnuAboutHelp.Size = new System.Drawing.Size(143, 26);
+            this.mnuAboutHelp.Text = "Help File";
+            // 
+            // btnCalculate
+            // 
+            this.btnCalculate.Location = new System.Drawing.Point(157, 187);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.Size = new System.Drawing.Size(75, 23);
+            this.btnCalculate.TabIndex = 13;
+            this.btnCalculate.Text = "Calculate";
+            this.btnCalculate.UseVisualStyleBackColor = true;
+            // 
+            // dataRepayments
+            // 
+            this.dataRepayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataRepayments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.VarRepayment,
+            this.principleRepayment,
+            this.interestRepayments});
+            this.dataRepayments.Location = new System.Drawing.Point(0, 228);
+            this.dataRepayments.Name = "dataRepayments";
+            this.dataRepayments.ReadOnly = true;
+            this.dataRepayments.RowTemplate.Height = 24;
+            this.dataRepayments.Size = new System.Drawing.Size(583, 220);
+            this.dataRepayments.TabIndex = 19;
+            // 
+            // VarRepayment
+            // 
+            this.VarRepayment.HeaderText = "Weekly Repayment Dates";
+            this.VarRepayment.Name = "VarRepayment";
+            this.VarRepayment.ReadOnly = true;
+            this.VarRepayment.Width = 200;
+            // 
+            // principleRepayment
+            // 
+            this.principleRepayment.HeaderText = "Principle Repayment";
+            this.principleRepayment.Name = "principleRepayment";
+            this.principleRepayment.ReadOnly = true;
+            this.principleRepayment.Width = 170;
+            // 
+            // interestRepayments
+            // 
+            this.interestRepayments.HeaderText = "Interest Repayments";
+            this.interestRepayments.Name = "interestRepayments";
+            this.interestRepayments.ReadOnly = true;
+            this.interestRepayments.Width = 170;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnExit);
+            this.ClientSize = new System.Drawing.Size(586, 450);
+            this.Controls.Add(this.dataRepayments);
+            this.Controls.Add(this.btnCalculate);
+            this.Controls.Add(this.dateRepayDate);
+            this.Controls.Add(this.cmbRepayRate);
+            this.Controls.Add(this.txtInterest);
+            this.Controls.Add(this.txtLoan);
+            this.Controls.Add(this.cmbMorRate);
+            this.Controls.Add(this.lblRepayDate);
+            this.Controls.Add(this.lblRepayRate);
+            this.Controls.Add(this.lblInterestRate);
+            this.Controls.Add(this.lblLoanAmount);
+            this.Controls.Add(this.lblMorRate);
+            this.Controls.Add(this.mnuStrip);
+            this.MainMenuStrip = this.mnuStrip;
             this.Name = "frmMain";
-            this.Text = "Form1";
+            this.Text = "Compound Interest Calculator";
+            this.Load += new System.EventHandler(this.frmMain_Load);
+            this.mnuStrip.ResumeLayout(false);
+            this.mnuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataRepayments)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lblMorRate;
+        private System.Windows.Forms.Label lblLoanAmount;
+        private System.Windows.Forms.Label lblInterestRate;
+        private System.Windows.Forms.Label lblRepayRate;
+        private System.Windows.Forms.Label lblRepayDate;
+        private System.Windows.Forms.ComboBox cmbMorRate;
+        private System.Windows.Forms.TextBox txtLoan;
+        private System.Windows.Forms.TextBox txtInterest;
+        private System.Windows.Forms.ComboBox cmbRepayRate;
+        private System.Windows.Forms.DateTimePicker dateRepayDate;
+        private System.Windows.Forms.MenuStrip mnuStrip;
+        private System.Windows.Forms.ToolStripMenuItem mnuFile;
+        private System.Windows.Forms.ToolStripMenuItem mnuAbout;
+        private System.Windows.Forms.ToolStripMenuItem mnuAboutHelp;
+        private System.Windows.Forms.ToolStripMenuItem mnuFileExit;
+        private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.DataGridView dataRepayments;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VarRepayment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn principleRepayment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn interestRepayments;
     }
 }
 

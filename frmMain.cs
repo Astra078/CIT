@@ -8,7 +8,9 @@
 *** Platform: Microsoft Windows 8.1 64-bit
 *** Platform Version: 6.3.9600 Build 9600
 *** Project: Assessment 2
-*** Objective: Creation of compound calculator that includes nested classes and a Help file
+*** Objective: Creation of compound calculator built with nested classes and comparators and a Help file
+***
+*** Additional Notes: The nested classes are in CompoundInterest.cs
 **/
 
 
@@ -36,6 +38,16 @@ namespace Assessment2NestedClassHelpFile
         {
             Application.Exit();
         }
-        
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            cmbMorRate.SelectedIndex = 0;
+            cmbRepayRate.SelectedIndex = 0;
+        }
     }
 }
