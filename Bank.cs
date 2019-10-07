@@ -8,20 +8,17 @@
 *** Platform: Microsoft Windows 8.1 64-bit
 *** Platform Version: 6.3.9600 Build 9600
 *** Project: Assessment 2
-*** Objective: Creation of pseudo bank built with nested classes and comparators.
+*** Objective: Creation of pseudo bank built with nested classes.
 **/
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assessment2NestedClassHelpFile
 {
     class Bank
     {
-        private List<Account> accounts = new List<Account>();
+        public List<Account> accounts = new List<Account>();
         private double totalCash;
         public string name { get; }
 
@@ -31,26 +28,38 @@ namespace Assessment2NestedClassHelpFile
             totalCash = 0;
         }
 
+        public int getAccounts()
+        {
+            return accounts.Count() - 1;//Arrays start at Zero
+        }
 
 
         public void newAccount(string inName)
         {
-            accounts.Add(new Account(inName, accounts.Count()));
+            accounts.Add(new Account(inName, accounts.Count(), this));//Reference this to the account constructor to avoid extra typing
         }
 
-        private class Account
+        internal class Account
         {
             public string owner { get; set; }
-            private int accountNo { get; set; }
-            private double money;
+            Bank bank;//Set account to only work with a single bank
+            private int accountNo { get;}
+            private double money { get; set; }
 
-            public Account(string inOwner, int inAccountNo)
+            public Account(string inOwner, int inAccountNo, Bank inBank)
             {
                 owner = inOwner;
                 accountNo = inAccountNo;
+                bank = inBank;
             }
 
-            public bool withdraw(double inRequest, Bank bank)
+            public void deposit(double inDeposit)
+            {
+                bank.totalCash = bank.totalCash + inDeposit;
+                money = money + inDeposit;
+            }
+
+            public bool withdraw(double inRequest)
             {
                 if(inRequest < money && inRequest < bank.totalCash)
                 {
@@ -61,6 +70,11 @@ namespace Assessment2NestedClassHelpFile
                 else
                     return false;
 
+            }
+
+            public double showBalance()
+            {
+                return money;
             }
         }
     }
