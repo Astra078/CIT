@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\Assessment2Graphics\bin\Debug\Assessment2Graphics.exe.config
+C:\Users\user\source\repos\Assessment2Graphics\bin\Debug\Assessment2Graphics.exe
+C:\Users\user\source\repos\Assessment2Graphics\bin\Debug\Assessment2Graphics.pdb
+C:\Users\user\source\repos\Assessment2Graphics\obj\Debug\Assessment2Graphics.csprojAssemblyReference.cache
+C:\Users\user\source\repos\Assessment2Graphics\obj\Debug\Assessment2Graphics.frmMain.resources
+C:\Users\user\source\repos\Assessment2Graphics\obj\Debug\Assessment2Graphics.Properties.Resources.resources
+C:\Users\user\source\repos\Assessment2Graphics\obj\Debug\Assessment2Graphics.csproj.GenerateResource.cache
+C:\Users\user\source\repos\Assessment2Graphics\obj\Debug\Assessment2Graphics.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Assessment2Graphics\obj\Debug\Assessment2Graphics.exe
+C:\Users\user\source\repos\Assessment2Graphics\obj\Debug\Assessment2Graphics.pdb
