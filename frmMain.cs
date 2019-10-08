@@ -8,7 +8,7 @@
 *** Platform: Microsoft Windows 8.1 64-bit
 *** Platform Version: 6.3.9600 Build 9600
 *** Project: Assessment 2
-*** Objective: Creation of a vehicle application with nested classes, comparators and a Help file
+*** Objective: Creation of a vehicle application with nested classes and a Help file
 ***
 *** Additional Notes: The nested classes are in Banks.cs
 **/
