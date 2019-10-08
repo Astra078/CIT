@@ -1,9 +1,8 @@
 ﻿/**
 *** Author: Conor Lynch CIT185593
-*** Date: 08/10/2019
+*** Date: 09/10/2019
 *** IDE: Microsoft Visual Studio Enterprise 2017
 *** IDE Version: 15.9.6
-*** Software: Microsoft .NET Framework
 *** Software Version: 4.7.02558
 *** Platform: Microsoft Windows 8.1 64-bit
 *** Platform Version: 6.3.9600 Build 9600
@@ -25,7 +24,6 @@ namespace Assessment2NestedClassHelpFile
         Bank bank = new Bank("Big Bank");
         int accountNum = -1;
         bool logged = false;
-        WebBrowser browser;
 
         public frmMain()
         {
@@ -148,7 +146,7 @@ namespace Assessment2NestedClassHelpFile
 
         private void mnuAboutHelp_Click(object sender, EventArgs e)
         {
-            //Open the help file
+            //Open the help file in a pdf format
             System.Diagnostics.Process.Start("The Big Bank User Guide.pdf");
         }
     }
