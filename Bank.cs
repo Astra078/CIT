@@ -61,7 +61,7 @@ namespace Assessment2NestedClassHelpFile
 
             public bool withdraw(double inRequest)
             {
-                if(inRequest < money && inRequest < bank.totalCash)
+                if(inRequest <= money && inRequest <= bank.totalCash)
                 {
                     money = money - inRequest;
                     bank.totalCash = bank.totalCash - inRequest;

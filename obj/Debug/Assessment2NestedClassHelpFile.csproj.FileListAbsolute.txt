@@ -8,3 +8,4 @@ C:\Users\user\source\repos\CIT\obj\Debug\Assessment2NestedClassHelpFile.csproj.G
 C:\Users\user\source\repos\CIT\obj\Debug\Assessment2NestedClassHelpFile.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\CIT\obj\Debug\Assessment2NestedClassHelpFile.exe
 C:\Users\user\source\repos\CIT\obj\Debug\Assessment2NestedClassHelpFile.pdb
+C:\Users\user\source\repos\CIT\bin\Debug\The Big Bank User Guide.pdf

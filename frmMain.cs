@@ -1,6 +1,6 @@
 ﻿/**
 *** Author: Conor Lynch CIT185593
-*** Date: 07/10/2019
+*** Date: 08/10/2019
 *** IDE: Microsoft Visual Studio Enterprise 2017
 *** IDE Version: 15.9.6
 *** Software: Microsoft .NET Framework
@@ -10,18 +10,11 @@
 *** Project: Assessment 2
 *** Objective: Creation of a vehicle application with nested classes, comparators and a Help file
 ***
-*** Additional Notes: The nested classes are in CompoundInterest.cs
+*** Additional Notes: The nested classes are in Banks.cs
 **/
 
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -32,6 +25,7 @@ namespace Assessment2NestedClassHelpFile
         Bank bank = new Bank("Big Bank");
         int accountNum = -1;
         bool logged = false;
+        WebBrowser browser;
 
         public frmMain()
         {
@@ -44,11 +38,7 @@ namespace Assessment2NestedClassHelpFile
         {
             Application.Exit();
         }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void btnLogon_Click(object sender, EventArgs e)
         {
@@ -61,12 +51,12 @@ namespace Assessment2NestedClassHelpFile
                 catch
                 {
                     accountNum = -1;
-                    lblBankName.Text = "That account does not exisit";
+                    lblBankName.Text = "That account does\nnot exist";
                 }
                 if (accountNum <= bank.getAccounts() && accountNum > -1)//Checks to see if the account is there
                 {
                     logged = true;
-                    lblBankName.Text = "Welcome to " + bank.name + " " + bank.accounts[accountNum].owner;
+                    lblBankName.Text = "Welcome to " + bank.name + "\n" + bank.accounts[accountNum].owner;
                     txtAccountNo.Enabled = false;
                     lblBalance.Visible = true;
                     txtBalance.Visible = true;
@@ -75,17 +65,18 @@ namespace Assessment2NestedClassHelpFile
                     btnDeposit.Visible = true;
                     btnWithdraw.Visible = true;
                     btnLogon.Text = "Logoff";
+                    mnuFileLogout.Enabled = true;
                     updateBalance(accountNum);
                 }
                 else
-                    lblBankName.Text = "That account does not exisit";
+                    lblBankName.Text = "That account does\nnot exist";
             }
             else
                 logOff();
         }
 
         public void logOff()
-        {
+        {//reverst to accessable GUI contents
             logged = false;
             lblBankName.Text = "The Big Bank";
             accountNum = -1;
@@ -99,6 +90,7 @@ namespace Assessment2NestedClassHelpFile
             btnLogon.Text = "Logon";
             txtAccountNo.Text = "";
             txtBalance.Text = "";
+            mnuFileLogout.Enabled = false;
         }
 
         private void btnDeposit_Click(object sender, EventArgs e)
@@ -125,9 +117,18 @@ namespace Assessment2NestedClassHelpFile
             {
                 amount = Convert.ToInt32(txtValue.Text);
                 lblBankName.Text = "Thanks for your service";
-                bank.accounts[accountNum].withdraw(amount);
-                updateBalance(accountNum);
-                txtValue.Text = 0+"";
+                if (bank.accounts[accountNum].withdraw(amount))
+                {
+                    lblBankName.Text = "Thanks for your service";
+                    updateBalance(accountNum);
+                    txtValue.Text = 0 + "";
+                }
+                else
+                {
+                    lblBankName.Text = "Insufficient Funds";
+                    txtValue.Text = 0 + "";
+                }
+                
             }
             catch
             {
@@ -138,6 +139,17 @@ namespace Assessment2NestedClassHelpFile
         private void updateBalance(int inAccount)
         {
             txtBalance.Text = bank.accounts[accountNum].showBalance()+"";
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            logOff();
+        }
+
+        private void mnuAboutHelp_Click(object sender, EventArgs e)
+        {
+            //Open the help file
+            System.Diagnostics.Process.Start("The Big Bank User Guide.pdf");
         }
     }
 }

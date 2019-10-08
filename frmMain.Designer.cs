@@ -43,6 +43,7 @@
             this.lblBalance = new System.Windows.Forms.Label();
             this.txtValue = new System.Windows.Forms.TextBox();
             this.lblValue = new System.Windows.Forms.Label();
+            this.mnuFileLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,13 +55,14 @@
             this.mnuAbout});
             this.mnuStrip.Location = new System.Drawing.Point(0, 0);
             this.mnuStrip.Name = "mnuStrip";
-            this.mnuStrip.Size = new System.Drawing.Size(770, 28);
+            this.mnuStrip.Size = new System.Drawing.Size(291, 28);
             this.mnuStrip.TabIndex = 12;
             this.mnuStrip.Text = "menuStrip1";
             // 
             // mnuFile
             // 
             this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuFileLogout,
             this.mnuFileExit});
             this.mnuFile.Name = "mnuFile";
             this.mnuFile.Size = new System.Drawing.Size(44, 24);
@@ -69,7 +71,7 @@
             // mnuFileExit
             // 
             this.mnuFileExit.Name = "mnuFileExit";
-            this.mnuFileExit.Size = new System.Drawing.Size(108, 26);
+            this.mnuFileExit.Size = new System.Drawing.Size(216, 26);
             this.mnuFileExit.Text = "Exit";
             this.mnuFileExit.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -84,8 +86,9 @@
             // mnuAboutHelp
             // 
             this.mnuAboutHelp.Name = "mnuAboutHelp";
-            this.mnuAboutHelp.Size = new System.Drawing.Size(143, 26);
+            this.mnuAboutHelp.Size = new System.Drawing.Size(216, 26);
             this.mnuAboutHelp.Text = "Help File";
+            this.mnuAboutHelp.Click += new System.EventHandler(this.mnuAboutHelp_Click);
             // 
             // lblBankName
             // 
@@ -101,7 +104,7 @@
             // lblAccountNo
             // 
             this.lblAccountNo.AutoSize = true;
-            this.lblAccountNo.Location = new System.Drawing.Point(13, 83);
+            this.lblAccountNo.Location = new System.Drawing.Point(15, 109);
             this.lblAccountNo.Name = "lblAccountNo";
             this.lblAccountNo.Size = new System.Drawing.Size(117, 17);
             this.lblAccountNo.TabIndex = 14;
@@ -109,9 +112,9 @@
             // 
             // btnDeposit
             // 
-            this.btnDeposit.Location = new System.Drawing.Point(40, 207);
+            this.btnDeposit.Location = new System.Drawing.Point(39, 237);
             this.btnDeposit.Name = "btnDeposit";
-            this.btnDeposit.Size = new System.Drawing.Size(75, 23);
+            this.btnDeposit.Size = new System.Drawing.Size(75, 30);
             this.btnDeposit.TabIndex = 15;
             this.btnDeposit.Text = "Deposit";
             this.btnDeposit.UseVisualStyleBackColor = true;
@@ -120,9 +123,9 @@
             // 
             // btnWithdraw
             // 
-            this.btnWithdraw.Location = new System.Drawing.Point(157, 207);
+            this.btnWithdraw.Location = new System.Drawing.Point(158, 237);
             this.btnWithdraw.Name = "btnWithdraw";
-            this.btnWithdraw.Size = new System.Drawing.Size(75, 23);
+            this.btnWithdraw.Size = new System.Drawing.Size(75, 30);
             this.btnWithdraw.TabIndex = 16;
             this.btnWithdraw.Text = "Withdraw";
             this.btnWithdraw.UseVisualStyleBackColor = true;
@@ -131,16 +134,17 @@
             // 
             // txtAccountNo
             // 
-            this.txtAccountNo.Location = new System.Drawing.Point(136, 80);
+            this.txtAccountNo.Location = new System.Drawing.Point(136, 106);
             this.txtAccountNo.Name = "txtAccountNo";
             this.txtAccountNo.Size = new System.Drawing.Size(129, 22);
             this.txtAccountNo.TabIndex = 17;
+            this.txtAccountNo.Text = "0";
             // 
             // btnLogon
             // 
-            this.btnLogon.Location = new System.Drawing.Point(96, 140);
+            this.btnLogon.Location = new System.Drawing.Point(96, 162);
             this.btnLogon.Name = "btnLogon";
-            this.btnLogon.Size = new System.Drawing.Size(75, 23);
+            this.btnLogon.Size = new System.Drawing.Size(75, 32);
             this.btnLogon.TabIndex = 18;
             this.btnLogon.Text = "Login";
             this.btnLogon.UseVisualStyleBackColor = true;
@@ -149,7 +153,7 @@
             // txtBalance
             // 
             this.txtBalance.Enabled = false;
-            this.txtBalance.Location = new System.Drawing.Point(136, 108);
+            this.txtBalance.Location = new System.Drawing.Point(136, 134);
             this.txtBalance.Name = "txtBalance";
             this.txtBalance.Size = new System.Drawing.Size(129, 22);
             this.txtBalance.TabIndex = 19;
@@ -158,7 +162,7 @@
             // lblBalance
             // 
             this.lblBalance.AutoSize = true;
-            this.lblBalance.Location = new System.Drawing.Point(15, 111);
+            this.lblBalance.Location = new System.Drawing.Point(15, 137);
             this.lblBalance.Name = "lblBalance";
             this.lblBalance.Size = new System.Drawing.Size(63, 17);
             this.lblBalance.TabIndex = 20;
@@ -167,7 +171,7 @@
             // 
             // txtValue
             // 
-            this.txtValue.Location = new System.Drawing.Point(136, 169);
+            this.txtValue.Location = new System.Drawing.Point(136, 209);
             this.txtValue.Name = "txtValue";
             this.txtValue.Size = new System.Drawing.Size(129, 22);
             this.txtValue.TabIndex = 21;
@@ -176,18 +180,26 @@
             // lblValue
             // 
             this.lblValue.AutoSize = true;
-            this.lblValue.Location = new System.Drawing.Point(15, 172);
+            this.lblValue.Location = new System.Drawing.Point(15, 212);
             this.lblValue.Name = "lblValue";
             this.lblValue.Size = new System.Drawing.Size(48, 17);
             this.lblValue.TabIndex = 22;
             this.lblValue.Text = "Value:";
             this.lblValue.Visible = false;
             // 
+            // mnuFileLogout
+            // 
+            this.mnuFileLogout.Enabled = false;
+            this.mnuFileLogout.Name = "mnuFileLogout";
+            this.mnuFileLogout.Size = new System.Drawing.Size(216, 26);
+            this.mnuFileLogout.Text = "Logout";
+            this.mnuFileLogout.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 450);
+            this.ClientSize = new System.Drawing.Size(291, 282);
             this.Controls.Add(this.lblValue);
             this.Controls.Add(this.txtValue);
             this.Controls.Add(this.lblBalance);
@@ -225,6 +237,7 @@
         private System.Windows.Forms.Label lblBalance;
         private System.Windows.Forms.TextBox txtValue;
         private System.Windows.Forms.Label lblValue;
+        private System.Windows.Forms.ToolStripMenuItem mnuFileLogout;
     }
 }
 
